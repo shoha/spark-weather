@@ -1,5 +1,3 @@
-console.log(process.env);
-
 var request = require('request');
 
 var core = {
