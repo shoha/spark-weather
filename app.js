@@ -1,10 +1,5 @@
 var request = require('request');
 
-var core = {
-  accessToken: process.env.CORE_ACCESS_TOKEN,
-  id: process.env.CORE_ID
-};
-
 var setTemperature = function(temp) {
   request.post('https://api.spark.io/v1/devices/' + process.env.CORE_ID + '/setTemp', 
     {form: {access_token: process.env.CORE_ACCESS_TOKEN, args: temp}}, function(err, res) {
